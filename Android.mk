@@ -1,10 +1,12 @@
-# Android device tree for readboy Readboy_V60 (msm8952_64)
-
-```
 #
 # Copyright (C) 2023 The Android Open Source Project
 # Copyright (C) 2023 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-```
+
+LOCAL_PATH := $(call my-dir)
+
+ifeq ($(TARGET_DEVICE),msm8952_64)
+include $(call all-subdir-makefiles,$(LOCAL_PATH))
+endif
